@@ -15,7 +15,7 @@ const recipeSchema = new Schema(
         "PumpkinHead",
         "Witch",
         "Oogie Boogie",
-        "Casper",
+        "Crapper the unfriendly ghost",
       ],
     },
     startDate: {
