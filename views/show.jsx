@@ -1,7 +1,7 @@
 const React = require('react')
 const Default = require('./layout/default')
 
-function Show ({treat, cursedBy}) {
+function Show ({treat, recipeBy}) {
     //console log to check data for treats in terminal
     //console.log(treat.name)
     return (
@@ -17,7 +17,7 @@ function Show ({treat, cursedBy}) {
                 have Ghosts.
             </p>
             <img src={treat.image} alt={treat.name} />
-            <p>{treat.getCursedBy()}</p>
+            <p>{treat.getrecipeBy()}</p>
             <a href={`/treats/${treat.id}/edit`}><button>Eat It!!!</button></a>
             <form action={`/treats/${treat.id}?_method=DELETE`} method="POST">
                 <input type='submit' value="DONT EAT!!!"/>

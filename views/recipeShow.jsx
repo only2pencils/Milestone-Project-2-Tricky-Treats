@@ -6,7 +6,7 @@ function Show ({recipe}) {
         <Default>
             <h3>{recipe.name}</h3>
             <p>{recipe.name} has been with us until you ATE it! {recipe.startDate.getFullYear()}</p>
-            <p>About {recipe.name}: {baker.bio}</p>
+            <p>About {recipe.name}: {recipe.bio}</p>
             <h3>Treats {recipe.name} has recipe</h3>
             <ul>
                 {

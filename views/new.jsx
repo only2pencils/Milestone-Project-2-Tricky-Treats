@@ -26,11 +26,11 @@ function New ({recipes}) {
                         )
                     })}
                 </select>
-                <label htmlFor="hasGooten">Has Gooten</label>
+                <label htmlFor="hasGhost">Has Ghost</label>
                 <input
                 type="checkbox"
-                name="hasGooten"
-                id="hasGooten"
+                name="hasGhost"
+                id="hasGhost"
                 defaultChecked
                 />
                 <br />
