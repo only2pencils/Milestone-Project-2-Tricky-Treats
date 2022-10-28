@@ -18,7 +18,7 @@ function Show ({treat, recipeBy}) {
             </p>
             <img src={treat.image} alt={treat.name} />
             <p>{treat.getrecipeBy()}</p>
-            <a href={`/treats/${treat.id}/edit`}><button>Eat It!!!</button></a>
+            <a href={`/treats/${treat.id}/edit`}><button>Headit</button></a>
             <form action={`/treats/${treat.id}?_method=DELETE`} method="POST">
                 <input type='submit' value="DONT EAT!!!"/>
             </form>

@@ -16,7 +16,7 @@ const treatSchema = new Schema({
 
 //helper method//
 treatSchema.methods.getRecipeBy = function () {
-  return `${this.name} was cursed with love by ${this.baker.name}, who has been terrorizing us since ${this}`;
+  return `${this.name} was cursed with love by ${this.recipe.name}, who has been terrorizing us since ${this}`;
 };
 
 const Treat = mongoose.model("Treat", treatSchema);

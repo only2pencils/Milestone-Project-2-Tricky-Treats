@@ -12,7 +12,7 @@ treats.get("/", async (req, res) => {
   res.render("index", {
     treats: foundTreats,
     recipes: foundRecipes,
-    title: "Severed Index Page",
+    title: "Severed Index Finger Page",
   });
 });
 
