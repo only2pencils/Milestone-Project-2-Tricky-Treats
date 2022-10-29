@@ -29,16 +29,18 @@ const recipeSchema = new Schema(
 
 //virtuals//
 recipeSchema.virtual("brebas", {
-  ref: "Treat",
+  ref: "Tricky Treat",
   localField: "_id",
   foreignField: "recipe",
 });
 
 //hooks//
 recipeSchema.post("findOneAndDelete", function () {
-  Treat.deleteMany({ recipe: this._conditions._id }).then((deleteStatus) => {
-    console.log(deleteStatus);
-  });
+  TrickyTreat.deleteMany({ recipe: this._conditions._id }).then(
+    (deleteStatus) => {
+      console.log(deleteStatus);
+    }
+  );
 });
 
 //model and export//

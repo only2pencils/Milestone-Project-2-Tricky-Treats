@@ -6,7 +6,7 @@ const recipeSeedData = require("../models/recipe_seed.js");
 //index//
 recipe.get("/", (req, res) => {
   Recipe.find()
-    .populate("treats")
+    .populate("tricky treats")
     .then((foundRecipes) => {
       res.send(foundRecipes);
     });
@@ -30,7 +30,7 @@ recipe.get("/:id", (req, res) => {
 //delete//
 recipe.delete("/:id", (req, res) => {
   Recipe.findByIdAndDelete(req.params.id).then((deletedRecipe) => {
-    res.status(303).redirect("/treats");
+    res.status(303).redirect("/trickytreats");
   });
 });
 
