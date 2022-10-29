@@ -31,7 +31,7 @@ app.get("/", (req, res) => {
 });
 
 //TREATS//
-const treatsController = require("./controllers/treats_controller.js");
+const treatsController = require("./controllers/trickytreats_controller.js");
 app.use("/treats", treatsController);
 
 //RECIPES//

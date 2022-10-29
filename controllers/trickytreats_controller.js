@@ -7,7 +7,7 @@ const trickytreatSeedData = require("../models/seed.js");
 //INDEX//
 trickytreats.get("/", async (req, res) => {
   const foundRecipes = await Recipe.find().lean();
-  const foundTreats = await Treat.find().limit(2).lean();
+  const foundTreats = await TrickyTreat.find().limit(2).lean();
   console.log(foundTreats);
   res.render("index", {
     treats: foundTreats,
@@ -76,7 +76,7 @@ trickytreats.post("/", (req, res) => {
   } else {
     req.body.hasGhost = false;
   }
-  Treat.create(req.body);
+  TrickyTreat.create(req.body);
   res.redirect("/treats");
 });
 

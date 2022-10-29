@@ -1,6 +1,6 @@
 //dependencies//
 const mongoose = require("mongoose");
-const Treat = require("./treat");
+// const Treat = require("./treat");
 const { Schema } = mongoose;
 
 //schema//
