@@ -7,10 +7,10 @@ const trickytreatSeedData = require("../models/seed.js");
 //INDEX//
 trickytreats.get("/", async (req, res) => {
   const foundRecipes = await Recipe.find().lean();
-  const foundTreats = await Treat.find().lean();
-  console.log(foundTreats);
+  const foundTrickyTreats = await TrickyTreat.find().lean();
+  console.log(foundTrickyTreats);
   res.render("index", {
-    treats: foundTreats,
+    treats: foundTrickyTreats,
     recipes: foundRecipes,
     title: "Severed Index Finger Page",
   });
@@ -42,9 +42,9 @@ trickytreats.get("/:id", (req, res) => {
 //EDIT//
 trickytreats.get("/:id/edit", (req, res) => {
   Recipe.find().then((foundRecipes) => {
-    Treat.findById(req.params.id).then((foundTreat) => {
+    TrickyTreat.findById(req.params.id).then((foundTrickyTreat) => {
       res.render("edit", {
-        treat: foundTreat,
+        trickytreat: foundTrickyTreat,
         recipes: foundRecipes,
       });
     });
@@ -84,8 +84,8 @@ trickytreats.post("/", (req, res) => {
 
 //DELETE//
 trickytreats.delete("/:id", (req, res) => {
-  Treat.findByIdAndDelete(req.params.id).then((deletedTreat) => {
-    res.status(303).redirect("/treats");
+  TrickyTreat.findByIdAndDelete(req.params.id).then((deletedTrickyTreat) => {
+    res.status(303).redirect("/trickytreats");
   });
 });
 
