@@ -68,9 +68,10 @@ trickytreats.put("/:id", (req, res) => {
 
 //CREATE//
 trickytreats.post("/", (req, res) => {
-  // if (!req.body.image) {
-  //   req.body.image = undefined;
-  // }
+  if (!req.body.image) {
+    req.body.image =
+      "https://images.unsplash.com/photo-1539180349055-53475d495a03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MzF8ODgzMTI0MHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60";
+  }
   console.log(req.body);
   if (req.body.hasGhost === "on") {
     req.body.hasGhost = "true";

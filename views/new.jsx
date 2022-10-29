@@ -1,7 +1,7 @@
 const React = require('react')
 const Default = require('./layout/Default')
 
-function New ({recipes}) {
+function New () {
     return (
         <Default>
             <h2> Add a new Tricky Treat</h2>
