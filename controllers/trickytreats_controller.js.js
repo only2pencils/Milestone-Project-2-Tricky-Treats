@@ -71,13 +71,14 @@ trickytreats.post("/", (req, res) => {
   // if (!req.body.image) {
   //   req.body.image = undefined;
   // }
+  console.log(req.body);
   if (req.body.hasGhost === "on") {
     req.body.hasGhost = "true";
   } else {
     req.body.hasGhost = "false";
   }
   TrickyTreat.push(req.body);
-  res.send("/trickytreats");
+  res.redirect("/trickytreats");
 });
 
 //DELETE//
