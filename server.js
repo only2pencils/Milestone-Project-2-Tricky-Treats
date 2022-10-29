@@ -23,7 +23,7 @@ app.use(methodOverride("_method"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.set("view engine", "jsx");
-app.engine("jsx", require(" express-react-views").createEngine());
+app.engine("jsx", require("express-react-views").createEngine());
 
 //ROUTES//
 app.get("/", (req, res) => {
