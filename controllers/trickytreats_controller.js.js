@@ -68,16 +68,16 @@ trickytreats.put("/:id", (req, res) => {
 
 //CREATE//
 trickytreats.post("/", (req, res) => {
-  if (!req.body.image) {
-    req.body.image = undefined;
-  }
+  // if (!req.body.image) {
+  //   req.body.image = undefined;
+  // }
   if (req.body.hasGhost === "on") {
-    req.body.hasGhost = true;
+    req.body.hasGhost = "true";
   } else {
-    req.body.hasGhost = false;
+    req.body.hasGhost = "false";
   }
-  Treat.create(req.body);
-  res.redirect("/treats");
+  TrickyTreat.push(req.body);
+  res.send("/trickytreats");
 });
 
 //DELETE//
