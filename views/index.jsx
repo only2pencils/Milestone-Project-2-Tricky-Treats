@@ -1,14 +1,14 @@
 const React = require('react')
 const Default = require('./layout/default')
 
-function Index ({treats, recipes, title}) {
+function Index ({trickytreats, recipes, title}) {
     return (
         <Default title={title}>
-            <h2>Severed Index Finger Page</h2>
+            <h2>Severed-Index Finger Page</h2>
             <h3>Recipes</h3>
             <ul>
                 {
-                    recipes.map((recipes)=> {
+                    recipes.map((recipe)=> {
                         return (
                             <li key={recipe._id}>
                                 <a href={`/recipes/${recipe._id}`}>{recipe.name}</a>
@@ -17,16 +17,16 @@ function Index ({treats, recipes, title}) {
                     })
                 }
             </ul>
-            <h3>Treats</h3>
+            <h3>Tricky Treats</h3>
             <div className='newButton'>
-                <a href="/treats/new"><button>Mummify a new treat</button></a>
+                <a href="/trickytreats/new"><button>Mummify a new treat</button></a>
             </div>
             {
-                treats.map((treat, index)=> {
+                trickytreats.map((trickytreat, index) => {
                     return (
-                        <li key={treat._id}>
-                            <a href={`/treats/${treat._id}`}>
-                            {treat.name}
+                        <li key={trickytreat._id}>
+                            <a href={`/trickytreats/${trickytreat._id}`}>
+                            {trickytreat.name}
                             </a>
                         </li>
                     )

@@ -5,15 +5,15 @@ function Show ({recipe}) {
     return (
         <Default>
             <h3>{recipe.name}</h3>
-            <p>{recipe.name} has been with us until you ATE it! {recipe.startDate.getFullYear()}</p>
+            <p>{recipe.name} Has been with us until you ATE it! {recipe.startDate.getFullYear()}</p>
             <p>About {recipe.name}: {recipe.bio}</p>
-            <h3>Treats {recipe.name} has recipe</h3>
+            <h3>Tricky Treats {recipe.name} has recipe</h3>
             <ul>
                 {
-                    recipe.treats.map((treat)=> {
+                    recipe.trickytreats.map((trickytreat)=> {
                         return (
-                            <li key={treat.id}>
-                                {treat.name}
+                            <li key={trickytreat.id}>
+                                {trickytreat.name}
                             </li>
                         )
                     })

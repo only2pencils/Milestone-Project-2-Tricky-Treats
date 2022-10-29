@@ -1,6 +1,6 @@
 const React = require("react");
-import Nav from 'react-bootstrap/Nav'
-import Container from 'react-bootstrap'
+// import Nav from 'react-bootstrap/Nav'
+// import Container from 'react-bootstrap'
 
 
 function Default(html) {
@@ -15,7 +15,7 @@ function Default(html) {
           <body>
             <div className="wrapper">
               <header>
-                <h1><a href="/treats">Tricky Treats</a></h1>
+                <h1><a href="/trickytreats">Tricky Treats</a></h1>
               </header>
               <div className="container">
                 {html.children}

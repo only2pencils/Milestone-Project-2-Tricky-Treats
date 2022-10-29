@@ -4,8 +4,8 @@ const Default = require('./layout/Default')
 function New ({recipes}) {
     return (
         <Default>
-            <h2> Add a new treat</h2>
-            <form action="/treats" method="POST">
+            <h2> Add a new Tricky Treat</h2>
+            <form action="/trickytreats" method="POST">
                 <label htmlFor="name">Name</label>
                 <input
                 type="text"
